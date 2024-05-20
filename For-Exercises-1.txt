@@ -6,13 +6,13 @@ You'll creating a hotel log restry
 In the hotel, guests may have 1 to 4 people per room. Your system should:
 
 1. ask how many people will be in the room
-2. ask name and cpf 
+2. ask name and ssn 
 3. list all like that:
 room = [
-    ['João', 'cpf:00000000000'],
-    ['Julia', 'cpf:11111111111'],
-    ['Marcus', 'cpf:22222222222'],
-    ['Maria', 'cpf:33333333333'],
+    ['João', 'ssn:00000000000'],
+    ['Julia', 'ssn:11111111111'],
+    ['Marcus', 'ssn:22222222222'],
+    ['Maria', 'ssn:33333333333'],
 ]
 
 ps: do not check input errors (study purposes)
@@ -20,8 +20,8 @@ ps: do not check input errors (study purposes)
 ## 2. Sales analitics
 
 You'll create a simple analitics for sales goal reaching from the following list
-meta = 10000
-vendas = [
+goal = 10000
+sales = [
     ['João', 15000],
     ['Julia', 27000],
     ['Marcus', 9900],
