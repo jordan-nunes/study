@@ -1,0 +1,45 @@
+# Exercícios
+
+## 1. Hotel Log
+
+You'll creating a hotel log restry
+In the hotel, guests may have 1 to 4 people per room. Your system should:
+
+1. ask how many people will be in the room
+2. ask name and cpf 
+3. list all like that:
+room = [
+    ['João', 'cpf:00000000000'],
+    ['Julia', 'cpf:11111111111'],
+    ['Marcus', 'cpf:22222222222'],
+    ['Maria', 'cpf:33333333333'],
+]
+
+ps: do not check input errors (study purposes)
+
+## 2. Sales analitics
+
+You'll create a simple analitics for sales goal reaching from the following list
+meta = 10000
+vendas = [
+    ['João', 15000],
+    ['Julia', 27000],
+    ['Marcus', 9900],
+    ['Maria', 3750],
+    ['Ana', 10300],
+    ['Alon', 7870],
+]
+We have a list of sellers and we must:
+1. identify wich sellers have reach the goal
+
+## 3. Year sales comparing
+
+We have a list with saling data:
+
+produtos = ['iphone', 'galaxy', 'ipad', 'tv', 'máquina de café', 'kindle', 'geladeira', 'adega', 'notebook dell', 'notebook hp', 'notebook asus', 'microsoft surface', 'webcam', 'caixa de som', 'microfone', 'câmera canon']
+vendas2019 = [558147,712350,573823,405252,718654,531580,973139,892292,422760,154753,887061,438508,237467,489705,328311,591120]
+vendas2020 = [951642,244295,26964,787604,867660,78830,710331,646016,694913,539704,324831,667179,295633,725316,644622,994303]
+
+We want to:
+1. identify wich product had more sales in 2020
+2. print that product name, 2019 sale, 2018 sale, growth (%)
