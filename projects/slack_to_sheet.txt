@@ -1,0 +1,1 @@
+This script gets the time (hour:min:sec) from the messages in a slack conversation
