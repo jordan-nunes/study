@@ -2,7 +2,7 @@
 
 ## 1 Sell averange 
 
-Make a program that gets sallers sale and returns:
+Make a program that gets the following list of sallers and sales and returns:
 
 sales of each Seller
 averange of sells
@@ -35,7 +35,7 @@ grades = [
 
 Use the following list to print:
 
-How many employees 25y's old or more earn less than the averange income of all employees
+How many employees 25y's old or more that earn less than the averange income of all employees
 
 ages = [35,32,50,33,48,50,33,48,22,49,35,38,20,47,49,48,34,21,48,44,48,30,25,42,42,23,25,23,38,35]
 income = [3739,2219,3554,3978,4014,3270,4792,3879,2981,2384,4826,2460,3680,4318,1872,1770,4640,3929,3295,1729,3965,4267,4007,1916,2987,2943,3852,4543,2055,1730]
@@ -83,7 +83,8 @@ the program should present:
 2. The total number of employees processed;
 3. The total amount to be spent on paying the allowance;
 4. The number of employees who will receive the minimum amount of 100 reais;
-5. The highest amount paid as a bonus; The screen below is an example of running the program, for illustrative purposes only.
+5. The highest amount paid as a bonus; The screen below is an example of running the program, 
+for illustrative purposes only.
 
 Projection of Allowance Spending
 
@@ -102,15 +103,17 @@ R$  100.00 - R$  100.00
 R$ 4500.00 - R$  900.00
  
 Total employees earned bonus: 5 employees 
-total bonuses given: R$ 1400.00
-minimum given to 3
-Maior valor de abono pago: R$ 900.00
+total bonuses given: $ 1400.00
+minimum bonus given to 3
+greater bonus value: $ 900
 
 salary_list = [1000, 300, 500, 200, 1500, 3000, 3400, 5000, 7000, 2000, 600, 800, 250, 1500, 20000]
 bonuses = []
 
-## 6 Make a program that asks a list of 5 cars 
-(ex: FUSCA, GOL, VECTRA etc). Ask a list of the fuel consuption of those 5 cars (km/l)
+## 6 Vehicle Consuption
+Make a program that takes a list of 5 cars 
+(ex: FUSCA, GOL, VECTRA etc). Then takes a list of the fuel consuption of those 5 cars (km/l)
+
 And returns:
 
 a. Most economic car;
@@ -145,27 +148,7 @@ Final output
 Most economic is peugeout.
 ```
 
-veiculos = ['fusca',' gol', 'uno', 'vectra', 'peugeot']
-autonomias = [7, 10, 12.5, 9, 14.5]
+vehicles = ['fusca',' gol', 'uno', 'vectra', 'peugeot']
+consuption = [7, 10, 12.5, 9, 14.5]
     
-print('Relatório Final')
-
-## 7 Comissions
-
-A company pays sellers by comissions. 
-A sellers gets \\$200 / week plus 9 % their sales / week. 
-Ex: Seller sold \\$3000 and gets \\$200 plus 9% of \\$3000, resulting $470
-
-Write a program and determine the sellers salaries based on the following values:
-
-$200 - $299
-$300 - $399
-$400 - $499
-$500 - $599
-$600 - $699
-$700 - $799
-$800 - $899
-$900 - $999
-$1000 em diante
-
-Note: there are many ways to do, do as you wish
+print('Final Sheet')
