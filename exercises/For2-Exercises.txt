@@ -2,7 +2,7 @@
 
 ## 1 Sell averange 
 
-Make a program that gets sallers sale and returns:
+Make a program that gets the following list of sallers and sales and returns:
 
 sales of each Seller
 averange of sells
