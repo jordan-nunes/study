@@ -1,4 +1,4 @@
-# Exercícios
+# Note: For study purposes, all exercises pressupose that the inputs are correct
 
 ## 1. Hotel Log
 
