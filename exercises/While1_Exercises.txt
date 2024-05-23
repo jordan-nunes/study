@@ -1,0 +1,5 @@
+## 1 Quantity input
+
+Create a program that asks a product name and quantity while the input isnt empty (press enter)
+
+At the end, print the list of products and quantities
