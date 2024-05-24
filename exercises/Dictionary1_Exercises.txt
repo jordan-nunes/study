@@ -1,0 +1,79 @@
+# Exercises
+
+## 1. Identifying Risk Locations
+
+(We don't know much about the real numbers and indicators, 
+this is an imaginary exercise to train with a more practical scenario)
+
+Let's say you are building a program to identify CO2 (carbon dioxide) levels 
+in certain locations to avoid potential accidents. In each of these locations, 
+your company has 5 sensors that capture the location's CO2 level.
+
+Normal CO2 levels are on average 350. 
+The CO2 level of a location is given by the average captured by the 5 sensors.
+
+This means that if we have the 5 sensors in Rio de Janeiro reading: 
+350, 400, 450, 350, 300, the CO2 level in Rio de Janeiro will be given by: 
+(350 + 400 + 450 + 350 + 300) / 5 = 370.
+
+If the level is higher than 450, a warning should be displayed by your program saying, 
+for example: Rio de Janeiro has very high levels of CO2 (490), 
+call a specialized team to check the region.
+
+The results from the sensors are monitored frequently and are fed into the 
+system in the form of a dictionary:
+
+niveis_co2 = {
+    'AC': [325,405,429,486,402],
+    'AL': [492,495,310,407,388],
+    'AP': [507,503,368,338,400],
+    'AM': [429,456,352,377,363],
+    'BA': [321,508,372,490,412],
+    'CE': [424,328,425,516,480],
+    'ES': [449,506,461,337,336],
+    'GO': [425,460,385,485,460],
+    'MA': [361,310,344,425,490],
+    'MT': [358,402,425,386,379],
+    'MS': [324,357,441,405,427],
+    'MG': [345,367,391,427,516],
+    'PA': [479,514,392,493,329],
+    'PB': [418,499,317,302,476],
+    'PR': [420,508,419,396,327],
+    'PE': [404,444,495,320,343],
+    'PI': [513,513,304,377,475],
+    'RJ': [502,481,492,502,506],
+    'RN': [446,437,519,356,317],
+    'RS': [427,518,459,317,321],
+    'RO': [517,466,512,326,458],
+    'RR': [466,495,469,495,310],
+    'SC': [495,436,382,483,479],
+    'SP': [495,407,362,389,317],
+    'SE': [508,351,334,389,418],
+    'TO': [339,490,304,488,419],
+    'DF': [376,516,320,310,518], 
+}
+
+## 2. Hashtag Case
+
+We recently had to back up the videos we have hosted on Vimeo. It turns out that there is no 
+button to Download all videos at the same time, we need to go 1 by 1 and download them manually
+
+The alternative is to generate code in Python that talks to the Vimeo API 
+(API is an integration that the tools open for programmers to be able to integrate their own 
+programs/scripts with the tool).
+
+To resolve this, we integrated and made a "request" of all videos to Vimeo. 
+This request gives our code the following as a response:
+
+video = {'uri': '/videos/465407533', 'name': '15 Atalhos no Excel para Ficar Mais Produtivo', 'download': [{'quality': 'source', 'type': 'source', 'width': 1920, 'height': 1080, 'expires': '2020-10-07T04:00:55+00:00', 'link': 'https://player.vimeo.com/play/2064518513?s=465407533_1602043255_5f2f93dd00b66eba66d481f913383b4f&loc=external&context=Vimeo%5CController%5CApi%5CResources%5CUser%5CVideosController.&download=1&filename=15%2BAtalhos%2Bno%2BExcel%2Bpara%2BFicar%2BMais%2BProdutivosource.mp4', 'created_time': '2020-10-06T14:26:17+00:00', 'fps': 30, 'size': 402678442, 'md5': 'af09508ceceed4994554f04e8b931e22', 'public_name': 'Original', 'size_short': '384.02MB'}, {'quality': 'hd', 'type': 'video/mp4', 'width': 1920, 'height': 1080, 'expires': '2020-10-07T04:00:55+00:00', 'link': 'https://player.vimeo.com/play/2064523157?s=465407533_1602043255_ab7b8353c59b5048032396ec5d95a276&loc=external&context=Vimeo%5CController%5CApi%5CResources%5CUser%5CVideosController.&download=1&filename=15%2BAtalhos%2Bno%2BExcel%2Bpara%2BFicar%2BMais%2BProdutivo175.mp4', 'created_time': '2020-10-06T14:29:06+00:00', 'fps': 30, 'size': 173556205, 'md5': '3c05e1e69bd6b13eb1464451033907d2', 'public_name': 'HD 1080p', 'size_short': '165.52MB'}, {'quality': 'sd', 'type': 'video/mp4', 'width': 960, 'height': 540, 'expires': '2020-10-07T04:00:55+00:00', 'link': 'https://player.vimeo.com/play/2064523153?s=465407533_1602043255_f5ac38009ec5c0a13b30600c631446a3&loc=external&context=Vimeo%5CController%5CApi%5CResources%5CUser%5CVideosController.&download=1&filename=15%2BAtalhos%2Bno%2BExcel%2Bpara%2BFicar%2BMais%2BProdutivo165.mp4', 'created_time': '2020-10-06T14:29:06+00:00', 'fps': 30, 'size': 89881848, 'md5': '4a5c5c96cdf18202ed20ca534fd88007', 'public_name': 'SD 540p', 'size_short': '85.72MB'}, {'quality': 'sd', 'type': 'video/mp4', 'width': 426, 'height': 240, 'expires': '2020-10-07T04:00:55+00:00', 'link': 'https://player.vimeo.com/play/2064522788?s=465407533_1602043255_16c69872e2c4e92cc949d0b772242959&loc=external&context=Vimeo%5CController%5CApi%5CResources%5CUser%5CVideosController.&download=1&filename=15%2BAtalhos%2Bno%2BExcel%2Bpara%2BFicar%2BMais%2BProdutivo139.mp4', 'created_time': '2020-10-06T14:28:31+00:00', 'fps': 30, 'size': 27401450, 'md5': '91cc0229087ec94bf67f64b01ad8768d', 'public_name': 'SD 240p', 'size_short': '26.13MB'}, {'quality': 'sd', 'type': 'video/mp4', 'width': 640, 'height': 360, 'expires': '2020-10-07T04:00:55+00:00', 'link': 'https://player.vimeo.com/play/2064522787?s=465407533_1602043255_310b087e2fc8c5e1154ce7a33d10d60e&loc=external&context=Vimeo%5CController%5CApi%5CResources%5CUser%5CVideosController.&download=1&filename=15%2BAtalhos%2Bno%2BExcel%2Bpara%2BFicar%2BMais%2BProdutivo164.mp4', 'created_time': '2020-10-06T14:28:31+00:00', 'fps': 30, 'size': 48627155, 'md5': '548640bf79ce1552a3401726bb0e4224', 'public_name': 'SD 360p', 'size_short': '46.37MB'}]}
+print(video)
+
+Note that it is completely confusing code, but at the end of the day it is a dictionary.
+
+Inside it we want to print the video download link and then simply click on all the links and 
+download all the videos.
+
+In our case, we had a list with more than 2,000 videos (each video being a dictionary exactly 
+like the one above), and so we did exactly the same procedure that you will build here below, 
+only inside a "for" to scroll through all videos. We cannot make the entire list available for 
+security and data protection reasons, but the dictionary above is worth the example.
