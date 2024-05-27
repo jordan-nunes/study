@@ -11,7 +11,13 @@
 # - segmentação de clientes
 # - analisador de texto
 # 
-# Para cada assunto, você encontrará ao menos um exercício. Nos casos onde há mais de um exercício para o mesmo assunto, você será convidado a resolver o mesmo problema de formas diferentes. Isso é proposital, pois o objetivo é que você pratique o que aprendeu e, ao mesmo tempo, aprenda novas formas de resolver um mesmo problema. Por exemplo, usando diferentes estruturas de dados, ou diferentes formas de iterar sobre uma estrutura de dados, ou, ainda, utilizando funções.
+# Para cada assunto, você encontrará ao menos um exercício. 
+Nos casos onde há mais de um exercício para o mesmo assunto, você será convidado 
+a resolver o mesmo problema de formas diferentes. Isso é proposital, 
+pois o objetivo é que você pratique o que aprendeu e, ao mesmo tempo, 
+aprenda novas formas de resolver um mesmo problema. Por exemplo, 
+usando diferentes estruturas de dados, ou diferentes formas de iterar sobre uma 
+estrutura de dados, ou, ainda, utilizando funções.
 # 
 # Tente resolver os exercícios sozinho. Se tiver dificuldades, consulte o material do curso e, se ainda assim não conseguir resolver, consulte a solução.
 
@@ -159,7 +165,12 @@
 
 # ### Terceira versão da lista de compras
 
-# Mantenha o programa da lista de compras com dicionário, mas agora use funções para organizar o código. Crie funções para cada uma das opções do menu: `adicionar_item`, `remover_item` e `ver_lista`. Crie também uma função para mostrar o menu. O programa deve continuar funcionando da mesma forma, mas agora o código deve estar organizado em funções.
+# Mantenha o programa da lista de compras com dicionário, 
+mas agora use funções para organizar o código.
+ Crie funções para cada uma das opções do menu: 
+ `adicionar_item`, `remover_item` e `ver_lista`. 
+ Crie também uma função para mostrar o menu. O programa deve continuar 
+ funcionando da mesma forma, mas agora o código deve estar organizado em funções.
 # 
 
 # In[ ]:
