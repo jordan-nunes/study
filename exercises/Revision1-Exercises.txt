@@ -262,7 +262,13 @@
 
 # ### Third Version of the Sales Report
 
-# Maintain the functionality of the program, but now use functions to organize the code. Create functions for each of the operations: `request_salesperson_name`, `request_sales`, `update_data`, and `print_data`. The program should continue to function the same way, but now the code should be organized into functions.
+# Maintain the functionality of the program, but now use functions to organize the code. 
+Create functions for each of the operations: 
+`request_salesperson_name`, 
+`request_sales`, 
+`update_data`, and 
+`print_data`. The program should continue to function the same way, 
+but now the code should be organized into functions.
 
 # In[ ]:
 
@@ -283,7 +289,8 @@
 # Structure your program as follows:
 # 
 # 1. Create an empty dictionary to store customers and their segments.
-# 2. Create an infinite loop that prompts the user for the customer's name and their total purchases.
+# 2. Create an infinite loop that prompts the user for the customer's name and 
+their total purchases.
 # 3. Within the loop, use an if statement to assign the appropriate segment to the customer.
 # 4. If the user enters 'exit' for the customer's name, end the loop using break.
 # 5. Outside the loop, use a for loop to print the name and segment of each customer.
@@ -343,7 +350,14 @@
 
 # ### Third Version of Customer Segmentation
 
-# Maintain the functionality of the program, but now use functions to organize the code. Create functions for each of the operations: `request_customer_name`, `request_total_purchases`, `assign_segment`, and `print_segment_by_customer`. The program should continue to function the same way, but now the code should be organized into functions. Additionally, normalize all names to be stored in lowercase.
+# Maintain the functionality of the program, but now use functions to organize the code. 
+Create functions for each of the operations: 
+`request_customer_name`, 
+`request_total_purchases`, 
+`assign_segment`, and 
+`print_segment_by_customer`. The program should continue to function the same way, 
+but now the code should be organized into functions. Additionally, 
+normalize all names to be stored in lowercase.
 
 # In[ ]:
 

@@ -6,21 +6,20 @@ while True:
     
     while True:
         try:
-            sale = int(input("Type the sales: "))
-            break
+            if seller in sales_dict.keys():
+                sale = int(input("Type the sales: "))
+                list_sales = sales_dict[seller]
+                list_sales.append(sale)
+                sales_dict.update({seller : list_sales})
+                break
+            else:
+                sale = [int(input("Type the sales: "))]
+                sales_dict.update({seller : sale})
+                break
         except:
             print("Invalid input. Please enter a number for sales.")
-        
-    if seller in sales_dict.keys():
-        sales, quantity = sales_dict[seller]
-        sales += sale
-        quantity += 1
-        sales_dict.update({seller : [sales, quantity]})
-    else:
-        quantity = 1
-        sales_dict.update({seller : [sale, quantity]})
 
 for key in sales_dict:
-    sales, quantity = sales_dict[key]
-    avg_sales = sales / quantity
-    print("{}: Total sales = $ {}, Average sales = $ {}".format(key, sales, avg_sales))
+    sum_sales_list = sum(sales_dict[key])
+    avg_sales = sum_sales_list / len(sales_dict[key])
+    print("{}: Total sales = $ {}, Average sales = $ {}".format(key, sum_sales_list, avg_sales))
