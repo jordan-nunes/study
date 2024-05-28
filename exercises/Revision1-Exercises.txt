@@ -1,449 +1,379 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Exercícios de fixação 
+# # Fixation exercises
 
-# A seguir, você encontrará alguns exercícios para fixar os conceitos aprendidos no curso até agora. Os exercícios estão divididos por exemplos práticos da vida real:
-# 
-# - lista de compras
-# - previsão de vendas
-# - relatório de vendas
-# - segmentação de clientes
-# - analisador de texto
-# 
-# Para cada assunto, você encontrará ao menos um exercício. 
-Nos casos onde há mais de um exercício para o mesmo assunto, você será convidado 
-a resolver o mesmo problema de formas diferentes. Isso é proposital, 
-pois o objetivo é que você pratique o que aprendeu e, ao mesmo tempo, 
-aprenda novas formas de resolver um mesmo problema. Por exemplo, 
-usando diferentes estruturas de dados, ou diferentes formas de iterar sobre uma 
-estrutura de dados, ou, ainda, utilizando funções.
-# 
-# Tente resolver os exercícios sozinho. Se tiver dificuldades, consulte o material do curso e, se ainda assim não conseguir resolver, consulte a solução.
+# Below you will find some exercises to consolidate the concepts learned in the course so far. The exercises are divided into practical, real-life examples:
+#
+# - Shopping list
+# - Sales forecast
+# - Sales report
+# - Customer segmentation
+# - Text parser
+#
+# For each subject, you will find at least one exercise.
+# In cases where there is more than one exercise for the same subject, you will be invited 
+# to solve the same problem in different ways. This is on purpose,
+# because the objective is for you to practice what you have learned and, at the same time,
+# learn new ways to solve the same problem. For example,
+# using different data structures, or different ways of iterating over a
+# data structure, or even using functions.
+#
+# Try to solve the exercises by yourself. If you have difficulties, consult the course material and, if you still cannot resolve it, consult the solution.
 
-# ## Lista de compras
+# ## Shopping list
 
-# ### Primeira versão da lista de compras
+# ### First version of the shopping list
 
-# Escreva um programa que permita que um usuário crie uma lista de compras.
-# O usuário deve ser capaz de adicionar itens, remover itens e visualizar a lista.
-# 
-# Estruture seu programa da seguinte forma:
-# 
-# 1. Crie uma lista vazia para armazenar os itens da lista de compras.
-# 2. Crie um loop infinito que imprima um menu de opções ao usuário e permita que ele escolha uma opção.
-# 3. Dentro do loop, use uma declaração if para executar a tarefa apropriada de acordo com a escolha do usuário.
-# 4. Se o usuário escolher adicionar um item, solicite que ele digite o nome do item e adicione-o à lista.
-# 5. Se o usuário escolher remover um item, solicite que ele digite o nome do item e remova-o da lista.
-# 6. Se o usuário escolher ver a lista, mostre cada item da lista em sua própria linha.
-# 7. Se o usuário escolher sair, encerre o loop usando break.
-# 
-# Exemplo de saída:
-# 
+# Write a program that allows a user to create a shopping list.
+# User must be able to add items, remove items and view the list.
+#
+# Structure your program as follows:
+#
+# 1. Create an empty list to store the shopping list items.
+# 2. Create an infinite loop that prints a menu of options to the user and allows them to choose an option.
+# 3. Inside the loop, use an if statement to perform the appropriate task as per the user's choice.
+# 4. If the user chooses to add an item, ask them to enter the name of the item and add it to the list.
+# 5. If the user chooses to remove an item, ask them to enter the name of the item and remove it from the list.
+# 6. If the user chooses to view the list, show each list item on its own line.
+# 7. If the user chooses to exit, terminate the loop using break.
+
+
+# ### Second version of the shopping list
+
+# Change the shopping list program to use a dictionary instead of a list.
+# The program should have the same functionalities, but now it should be possible
+# to add more than one unit of an item to the shopping list. That is, the dictionary
+# should store the item name and the quantity desired by the user. For example,
+# if the user types "banana" and "2", the dictionary should store "banana" as the key
+# and 2 as the value. The dictionary structure would be like this: `{"banana": 2}`.
+#
+# The program should allow the user to add, remove and view the shopping dictionary.
+#
+# Additionally, the program should show an error message if the user tries to
+# use an invalid menu option. For example, if the user types 5, the program
+# should show the message "Invalid option. Please choose a valid option." and
+# show the menu again. Also, the program should be case insensitive, meaning
+# "Apple" and "apple" should be considered the same item.
+#
+# Example output:
+#
 # ```
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 1
-# Digite um item: banana
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 1
-# Digite um item: maçã
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 3
-# ['banana', 'maçã']
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 2
-# Digite um item: banana
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 3
-# ['maçã']
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 4
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 1
+# Type an item: banana
+# Type the quantity: 2
+#
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 1
+# Type an item: apple
+# Type the quantity: 3
+#
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 3
+# {'banana': 2, 'apple': 3}
+#
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 2
+# Type an item: banana
+# Type the quantity: 1
+#
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 3
+# {'banana': 1, 'apple': 3}
+#
+# 1 Add item
+# 2 Remove item
+# 3 View list
+# 4 Exit
+# Choose an option: 4
 # ```
-
-# In[1]:
-
-
-# solução
-
-
-# ### Segunda versão da lista de compras
-# 
-
-# Mude o programa de lista de compras para usar um dicionário ao invés de uma lista.
-# O programa deve ter as mesmas funcionalidades, mas agora deve ser possível
-# adicionar mais de uma unidade de um item na lista de compras. Ou seja, o dicionário
-# deve armazenar o nome do item e a quantidade desejada pelo usuário. Por exemplo,
-# se o usuário digitar "banana" e "2", o dicionário deve armazenar "banana" como chave
-# e 2 como valor. A estrutura do dicionário ficaria assim: `{"banana": 2}`.
-# 
-# O programa deve permitir que o usuário adicione, remova e visualize o dicionário de compras.
-# 
-# Além disso, o programa deve mostrar uma mensagem de erro se o usuário tentar
-# usar uma opção inválida do menu. Por exemplo, se o usuário digitar 5, o programa
-# deve mostrar a mensagem "Opção inválida. Por favor, escolha uma opção válida." e
-# mostrar o menu novamente. Além disso, o programa deve ser *case insensitive*, ou seja,
-# "Maçã" e "maçã" devem ser considerados o mesmo item.
-# 
-# Exemplo de saída:
-# 
-# ```
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 1
-# Digite um item: banana
-# Digite a quantidade: 2
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 1
-# Digite um item: maçã
-# Digite a quantidade: 3
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 3
-# {'banana': 2, 'maçã': 3}
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 2
-# Digite um item: banana
-# Digite a quantidade: 1
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 3
-# {'banana': 1, 'maçã': 3}
-# 
-# 1 Adicionar item
-# 2 Remover item
-# 3 Ver lista
-# 4 Sair
-# Escolha uma opção: 4
-# ```
-# 
 
 # In[ ]:
 
-
-# solução
-
+# solution
 
 
-# ### Terceira versão da lista de compras
 
-# Mantenha o programa da lista de compras com dicionário, 
-mas agora use funções para organizar o código.
- Crie funções para cada uma das opções do menu: 
- `adicionar_item`, `remover_item` e `ver_lista`. 
- Crie também uma função para mostrar o menu. O programa deve continuar 
- funcionando da mesma forma, mas agora o código deve estar organizado em funções.
-# 
+# ### Third version of the shopping list
+
+# Keep the shopping list program with a dictionary,
+# but now use functions to organize the code.
+# Create functions for each menu option:
+# `add_item`, `remove_item`, and `view_list`.
+# Also, create a function to show the menu. The program should continue
+# to work the same way, but now the code should be organized in functions.
+#
 
 # In[ ]:
 
+# solution
 
-# solução
 
+# ## Sales forecast
 
-# ## Previsão de vendas
+# ### First version of the sales forecast
 
-# ### Primeira versão da previsão de vendas
-
-# Escreva um programa que preveja as vendas totais para cada produto em uma empresa.
-# O usuário deve digitar o nome do produto, as vendas do mês atual e a taxa de crescimento,
-# e o programa deve calcular as vendas previstas para o próximo mês.
-# 
-# Estruture seu programa da seguinte forma:
-# 
-# 1. Crie um dicionário vazio para armazenar as previsões de vendas.
-# 2. Crie um loop infinito que solicite ao usuário o nome do produto, as vendas do mês atual e a taxa de crescimento.
-# 3. Dentro do loop, use uma declaração if para verificar se o usuário digitou 'sair'.
-# 4. Se o usuário digitar 'sair', encerre o loop usando break.
-# 5. Se o usuário digitar qualquer outra coisa, use as entradas para calcular as vendas previstas e adicione-as ao dicionário.
-# 6. Depois que o loop for encerrado, use um loop for para iterar sobre o dicionário e mostrar as previsões de vendas para cada produto.
-# 
-# Exemplo de saída:
-# 
+# Write a program that forecasts total sales for each product in a company.
+# The user should enter the product name, current month's sales, and growth rate,
+# and the program should calculate the forecasted sales for the next month.
+#
+# Structure your program as follows:
+#
+# 1. Create an empty dictionary to store sales forecasts.
+# 2. Create an infinite loop that prompts the user for the product name, current month's sales, and growth rate.
+# 3. Inside the loop, use an if statement to check if the user typed 'exit'.
+# 4. If the user types 'exit', terminate the loop using break.
+# 5. If the user types anything else, use the inputs to calculate the forecasted sales and add them to the dictionary.
+# 6. After the loop ends, use a for loop to iterate over the dictionary and show the sales forecasts for each product.
+#
+# Example output:
+#
 # ```
-# Digite o nome do produto (ou 'sair' para sair): iphone
-# Digite as vendas do mês atual: 10000
-# Digite a taxa de crescimento (%): 10
-# Digite o nome do produto (ou 'sair' para sair): capinha para iphone
-# Digite as vendas do mês atual: 200
-# Digite a taxa de crescimento (%): 20
-# Digite o nome do produto (ou 'sair' para sair): sair
-# iphone: Previsão de vendas do próximo mês = R$ 11000.00
-# capinha para iphone: Previsão de vendas do próximo mês = R$ 240.00
+# Type the product name (or 'exit' to exit): iphone
+# Type the current month's sales: 10000
+# Type the growth rate (%): 10
+# Type the product name (or 'exit' to exit): iphone case
+# Type the current month's sales: 200
+# Type the growth rate (%): 20
+# Type the product name (or 'exit' to exit): exit
+# iphone: Next month's sales forecast = R$ 11000.00
+# iphone case: Next month's sales forecast = R$ 240.00
 # ```
-# 
 
 # In[ ]:
 
+# solution
 
-# solução
 
+# ### Second version of the sales forecast
 
-# ### Segunda versão da previsão de vendas
-# 
-
-# Mantenha a mesma funcionalidade do programa anterior, mas agora valide a entrada do usuário.
-# Se o usuário digitar um valor inválido para vendas ou taxa de crescimento, mostre a mensagem
-# "Entrada inválida. Por favor, digite um número para vendas e taxa de crescimento." e peça
-# para o usuário digitar novamente. Tal validação deve ser feita usando try/except.
-# 
+# Keep the same functionality of the previous program, but now validate user input.
+# If the user types an invalid value for sales or growth rate, show the message
+# "Invalid input. Please enter a number for sales and growth rate." and prompt
+# the user to enter the values again. This validation should be done using try/except.
 
 # In[ ]:
 
-
-# solução
-
+# solution
 
 
-# ## Relatório de vendas
 
-# ### Primeira versão do relatório de vendas
+# ## Sales report
 
-# Escreva um programa que calcula o total e a média de vendas para cada vendedor em uma empresa.
-# O usuário deve digitar o nome do vendedor e suas vendas, e o programa deve manter o controle
-# do total e da média de vendas para cada vendedor.
-# 
-# Estruture seu programa da seguinte forma:
-# 
-# 1. Crie um dicionário vazio para armazenar os dados de vendas.
-# 2. Crie um loop infinito que solicite ao usuário o nome do vendedor e suas vendas.
-# 3. Dentro do loop, use uma declaração if para verificar se o usuário digitou 'sair'.
-# 4. Se o usuário digitar 'sair', encerre o loop usando break.
-# 5. Se o usuário digitar qualquer outra coisa, use as entradas para calcular o total e a média de vendas para o vendedor e adicione-os ao dicionário.
-# 6. Depois que o loop for encerrado, use um loop for para iterar sobre o dicionário e mostrar o total e a média de vendas para cada vendedor.
-# 
-# Exemplo de saída:
+# ### First version of the sales report
+
+# Write a program that calculates the total and average sales for each salesperson in a company.
+# The user should enter the salesperson's name and sales, and the program should keep track of
+# the total and average sales for each salesperson.
+#
+# Structure your program as follows:
+#
+# 1. Create an empty dictionary to store sales data.
+# 2. Create an infinite loop that prompts the user for the salesperson's name and sales.
+# 3. Inside the loop, use an if statement to check if the user typed 'exit'.
+# 4. If the user types 'exit', terminate the loop using break.
+# 5. If the user types anything else, use the inputs to calculate the total and average sales for the salesperson and add them to the dictionary.
+# 6. After the loop ends, use a for loop to iterate over the dictionary and show the total and average sales for each salesperson.
+#
+# Example output:
 #     
 # ```
-# Digite o nome do vendedor (ou 'sair' para sair): João
-# Digite as vendas: 100
-# Digite o nome do vendedor (ou 'sair' para sair): Maria
-# Digite as vendas: 200
-# Digite o nome do vendedor (ou 'sair' para sair): João
-# Digite as vendas: 300
-# Digite o nome do vendedor (ou 'sair' para sair): sair
-# João: Total de vendas = R$ 400.0, Média de vendas = R$ 200.0
-# Maria: Total de vendas = R$ 200.0, Média de vendas = R$ 200.0
+# Type the salesperson's name (or 'exit' to exit): John
+# Type the sales: 100
+# Type the salesperson's name (or 'exit' to exit): Mary
+# Type the sales: 200
+# Type the salesperson's name (or 'exit' to exit): John
+# Type the sales: 300
+# Type the salesperson's name (or 'exit' to exit): exit
+# John: Total sales = R$ 400.0, Average sales = R$ 200.0
+# Mary: Total sales = R$ 200.0, Average sales = R$ 200.0
 # ```
-# 
-# Dica: use o método sum() para calcular o total de vendas e o método len() para calcular o número de vendas.
-# 
+#
+# Tip: use the sum() method to calculate the total sales and the len() method to calculate the number of sales.
 
 # In[ ]:
 
-
-# solução
-
+# solution
 
 
-# ### Segunda versão do relatório de vendas
+# ### Second Version of the Sales Report
+
+# Maintain the same functionality of the previous program, but now validate the user input.
+# If the user enters an invalid value for sales, show the message
+# "Invalid input. Please enter a number for sales." and ask the user to enter
+# the value again. Such validation must be done using try/except.
 # 
-
-# Mantenha a mesma funcionalidade do programa anterior, mas agora valide a entrada do usuário.
-# Se o usuário digitar um valor inválido para vendas, mostre a mensagem
-# "Entrada inválida. Por favor, digite um número para vendas." e peça para o usuário digitar
-# novamente. Tal validação deve ser feita usando try/except.
-# 
-# Além disso, ao invés de armazenar cada venda em uma lista para cada vendedor, armazene
-# o total de vendas e a quantidade de vendas em um dicionário. Por exemplo, se o usuário
-# digitar "João" e "1000" para vendas, o dicionário deve ficar assim:
+# Additionally, instead of storing each sale in a list for each salesperson, store
+# the total sales and the number of sales in a dictionary. For example, if the user
+# enters "João" and "1000" for sales, the dictionary should look like this:
 # 
 # ```python
-# {'João': {'total_vendas': 1000, 'quantidade_vendas': 1}}
+# {'João': {'total_sales': 1000, 'number_of_sales': 1}}
 # ```
 # 
-# Se, após, o usuário digitar "João" e "2000" para vendas, o dicionário deve ficar assim:
+# If, later, the user enters "João" and "2000" for sales, the dictionary should look like this:
 # 
 # ```python
-# {'João': {'total_vendas': 3000, 'quantidade_vendas': 2}}
+# {'João': {'total_sales': 3000, 'number_of_sales': 2}}
 # ```
 # 
-# Perceba como o total de vendas de João aumentou em 2000, assim como a quantidade aumentou em uma unidade.
+# Notice how the total sales for João increased by 2000, as well as the number of sales increased by one unit.
 # 
-# Ao final, mostre o total de vendas e a média de vendas de cada vendedor.
+# At the end, show the total sales and the average sales for each salesperson.
 # 
-# Exemplo de saída:
+# Example output:
 # 
 # ```
-# Digite o nome do vendedor (ou 'sair' para sair): João
-# Digite as vendas: 1000
-# Digite o nome do vendedor (ou 'sair' para sair): Maria
-# Digite as vendas: 2000
-# Digite o nome do vendedor (ou 'sair' para sair): João
-# Digite as vendas: 2000
-# Digite o nome do vendedor (ou 'sair' para sair): Maria
-# Digite as vendas: 3000
-# Digite o nome do vendedor (ou 'sair' para sair): sair
-# João: Total de vendas = R$ 3000.00, Média de vendas = R$ 1500.00
-# Maria: Total de vendas = R$ 5000.00, Média de vendas = R$ 2500.00
+# Enter the name of the salesperson (or 'exit' to exit): João
+# Enter the sales: 1000
+# Enter the name of the salesperson (or 'exit' to exit): Maria
+# Enter the sales: 2000
+# Enter the name of the salesperson (or 'exit' to exit): João
+# Enter the sales: 2000
+# Enter the name of the salesperson (or 'exit' to exit): Maria
+# Enter the sales: 3000
+# Enter the name of the salesperson (or 'exit' to exit): exit
+# João: Total sales = $3000.00, Average sales = $1500.00
+# Maria: Total sales = $5000.00, Average sales = $2500.00
 # ```
-# 
 
 # In[ ]:
 
 
-# solução
+# solution
 
 
 
-# ### Terceira versão do relatório de vendas
+# ### Third Version of the Sales Report
 
-#  Mantenha a funcionalidade do programa, mas agora use funções para organizar o código. Crie funções para cada uma das operações: `solicitar_nome_vendedor`, `solicitar_vendas` e `atualizar_dados` e `print_dados`. O programa deve continuar funcionando da mesma forma, mas agora o código deve estar organizado em funções.
+# Maintain the functionality of the program, but now use functions to organize the code. Create functions for each of the operations: `request_salesperson_name`, `request_sales`, `update_data`, and `print_data`. The program should continue to function the same way, but now the code should be organized into functions.
 
 # In[ ]:
 
 
-# solução
+# solution
 
 
 
-# ## Segmentação de clientes
+# ## Customer Segmentation
 
-# ### Primeira versão da segmentação de clientes
+# ### First Version of Customer Segmentation
 
-# Escreva um programa que segmenta clientes com base em suas compras totais.
-# O usuário deve digitar o nome do cliente e suas compras totais, e o programa
-# deve atribuir cada cliente a um segmento: 'Bronze' para compras de até R\\$ 1000,
-# 'Prata' para compras de até R\\$ 5000 e 'Ouro' para compras acima de R\\$ 5000.
+# Write a program that segments customers based on their total purchases.
+# The user should enter the customer's name and their total purchases, and the program
+# should assign each customer to a segment: 'Bronze' for purchases up to $1000,
+# 'Silver' for purchases up to $5000, and 'Gold' for purchases over $5000.
 # 
-# Estruture seu programa da seguinte forma:
+# Structure your program as follows:
 # 
-# 1. Crie um dicionário vazio para armazenar os clientes e seus segmentos.
-# 2. Crie um loop infinito que solicite ao usuário o nome do cliente e suas compras totais.
-# 3. Dentro do loop, use uma declaração if para atribuir o segmento apropriado ao cliente.
-# 4. Se o usuário digitar 'sair' para o nome do cliente, encerre o loop usando break.
-# 5. Fora do loop, use um loop for para imprimir o nome e o segmento de cada cliente.
+# 1. Create an empty dictionary to store customers and their segments.
+# 2. Create an infinite loop that prompts the user for the customer's name and their total purchases.
+# 3. Within the loop, use an if statement to assign the appropriate segment to the customer.
+# 4. If the user enters 'exit' for the customer's name, end the loop using break.
+# 5. Outside the loop, use a for loop to print the name and segment of each customer.
 # 
-# Exemplo de saída:
+# Example output:
 #     
 # ```
-# Digite o nome do cliente (ou 'sair' para sair): João
-# Digite o total de compras: 100
-# Digite o nome do cliente (ou 'sair' para sair): Maria
-# Digite o total de compras: 2000
-# Digite o nome do cliente (ou 'sair' para sair): José
-# Digite o total de compras: 6000
-# Digite o nome do cliente (ou 'sair' para sair): sair
-# João: Segmento do Cliente = Bronze
-# Maria: Segmento do Cliente = Prata
-# José: Segmento do Cliente = Ouro
+# Enter the name of the customer (or 'exit' to exit): João
+# Enter the total purchases: 100
+# Enter the name of the customer (or 'exit' to exit): Maria
+# Enter the total purchases: 2000
+# Enter the name of the customer (or 'exit' to exit): José
+# Enter the total purchases: 6000
+# Enter the name of the customer (or 'exit' to exit): exit
+# João: Customer Segment = Bronze
+# Maria: Customer Segment = Silver
+# José: Customer Segment = Gold
 # ```
-# 
 
 # In[ ]:
 
 
-# solução
- 
+# solution
 
 
-# ### Segunda versão da segmentação de clientes
-# 
 
+# ### Second Version of Customer Segmentation
+
+# Maintain the same functionality of the previous program, but now validate the user input.
+# If the user enters an invalid value for purchases, show the message
+# "Invalid input. Please enter a number for purchases." and ask the user to enter
+# the value again. Such validation must be done using try/except.
 # 
-# Mantenha a mesma funcionalidade do programa anterior, mas agora valide a entrada do usuário.
-# Se o usuário digitar um valor inválido para compras, mostre a mensagem
-# "Entrada inválida. Por favor, digite um número para compras." e peça para o usuário digitar
-# novamente. Tal validação deve ser feita usando try/except.
-# 
-# Além disso, ao invés de deixar os limites de compras fixos no programa, armazene-os em uma
-# lista de tuplas. Por exemplo:
+# Additionally, instead of leaving the purchase limits fixed in the program, store them in a
+# list of tuples. For example:
 # 
 # ```python
-# segmentos = [(1000, 'Bronze'), (5000, 'Prata'), (float('inf'), 'Ouro')]
+# segments = [(1000, 'Bronze'), (5000, 'Silver'), (float('inf'), 'Gold')]
 # ``` 
 # 
-# Assim, outros segmentos podem ser adicionados facilmente. O primeiro elemento da tupla é o
-# limite de compras e o segundo é o nome do segmento. O último elemento da lista é uma tupla
-# com limite `float('inf')`, que representa o segmento Ouro. Isso significa que, se o valor de
-# compras for maior que todos os limites, o segmento será Ouro.
+# This way, other segments can be easily added. The first element of the tuple is the
+# purchase limit and the second is the segment name. The last element of the list is a tuple
+# with the limit `float('inf')`, representing the Gold segment. This means that if the purchase
+# value is greater than all limits, the segment will be Gold.
 # 
-# Depois, percorra essa lista e, para cada tupla, verifique se o valor de compras é menor ou igual
-# ao limite. Se for, armazene o segmento em um dicionário. Por exemplo, se o usuário digitar
-# "João" e "500" para compras, o dicionário deve ficar assim:
+# Then, go through this list and, for each tuple, check if the purchase value is less than or equal
+# to the limit. If it is, store the segment in a dictionary. For example, if the user enters
+# "João" and "500" for purchases, the dictionary should look like this:
 # `{'João': 'Bronze'}`
-# 
 
 # In[ ]:
 
 
-# solução
- 
+# solution
 
 
-# ### Terceira versão da segmentação de clientes
 
-# Mantenha a funcionalidade do programa, mas agora use funções para organizar o código. Crie funções para cada uma das operações: `solicitar_nome_cliente`, `solicitar_total_compras` e `atribuir_segmento` e `print_segmento_por_cliente`. O programa deve continuar funcionando da mesma forma, mas agora o código deve estar organizado em funções. Além disso, normalize que todos os nomes sejam armazenados em letras minúsculas.
+# ### Third Version of Customer Segmentation
+
+# Maintain the functionality of the program, but now use functions to organize the code. Create functions for each of the operations: `request_customer_name`, `request_total_purchases`, `assign_segment`, and `print_segment_by_customer`. The program should continue to function the same way, but now the code should be organized into functions. Additionally, normalize all names to be stored in lowercase.
 
 # In[ ]:
 
 
-# solução
+# solution
 
 
-# ## Analisador de texto
+# ## Text Analyzer
 
-# Crie um programa que analise um texto fornecido pelo usuário.
-# O programa deve contar o número de palavras (independentemente se há repetição ou não),
-# a quantidade de cada palavra e a
-# quantidade de cada letra. Ignore maiúsculas e minúsculas ao contar letras.
-# Não se preocupe com pontuação e espaços ao contar palavras.
+# Create a program that analyzes a text provided by the user.
+# The program should count the number of words (regardless of repetition),
+# the frequency of each word, and the frequency of each letter. Ignore case when counting letters.
+# Don't worry about punctuation and spaces when counting words.
 # 
-# O programa deve conter uma função chamada `analisar_texto` que recebe o texto
-# como parâmetro e retorna a contagem de palavras, a frequência de palavras e a
-# frequência de letras.
+# The program should contain a function called `analyze_text` that takes the text
+# as a parameter and returns the word count, word frequency, and letter frequency.
 # 
-# Para o texto "Olá mundo! Este é um teste. Olá novamente." o programa deve
-# imprimir:
+# For the text "Hello world! This is a test. Hello again." the program should
+# print:
 #     
 # ```
-# Contagem de palavras: 8
-# Frequência de palavras: {'Olá': 2, 'mundo!': 1, 'Este': 1, 'é': 1, 'um': 1, 'teste.': 1, 'novamente.': 1}
-# Frequência de letras: {'o': 4, 'l': 2, 'á': 2, 'm': 3, 'u': 2, 'n': 3, 'd': 1, '!': 1, 'e': 6, 's': 2, 't': 4, 'é': 1, '.': 2, 'v': 1, 'a': 1}
+# Word count: 8
+# Word frequency: {'Hello': 2, 'world!': 1, 'This': 1, 'is': 1, 'a': 1, 'test.': 1, 'again.': 1}
+# Letter frequency: {'h': 4, 'e': 6, 'l': 4, 'o': 4, 'w': 1, 'r': 1, 'd': 1, '!': 1, 't': 4, 'i': 1, 's': 2, 'a': 2, '.': 2, 'g': 1, 'n': 2}
 # ```
 # 
-# **Observação**: Mais adiante no curso, aprenderemos a lidar com a pontuação.
+# **Note**: Later in the course, we will learn how to deal with punctuation.
 
 # In[ ]:
 
 
-# solução
-
+# solution
+```
