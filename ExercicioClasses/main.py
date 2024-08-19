@@ -1,5 +1,10 @@
-from Classes_Indicadores import Indicadores, IndicadorCliente, IndicadorProduto, IndicadorLoja
 import pandas as pd
+from ExercicioClasses.BancoDados import Dados
+from Ordem import Ordem
+from Produto import Produto
+from Cliente import Cliente
 
-indicador = Indicadores()
-#print(indicador.mais_frequente_linha("Order ID").to_string())
+ordem = Ordem()
+
+
+ordem.exibir_dados()

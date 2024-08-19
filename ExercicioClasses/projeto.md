@@ -1,4 +1,4 @@
-# Titulo
+# Exercicio de Classes
 Considere que uma empresa tem múltiplos processos executando ao mesmo tempo em diferentes máquinas, porém parte deles são parecidos, 
 principalmente nos padrões de requisição, resposta e estrutura.
 Sua missão então é criar uma pilha de execução que aceite qualquer trabalho, 
@@ -11,42 +11,17 @@ Para melhorar o entendimento, imagine que você tem três processos, identifica�
 Crie Interfaces das partes em comum desses processos (Classes), 
 e utilize o polimorfismo para a identificação das operações, e a hierarquia para uso de métodos comuns (ou específicos).
 
+## Abordagem:
 
-#utilizar classes abstratas
+Definir a classe genérica e suas subclasses com seus atributos e métodos e relacioná-los
 
-#estudar markdown
+### Abordagem futura:
 
------------ abordagem:
+Trabalhar em cima de um dataset, para aliar o desafio com o exercitar do uso da biblioteca pandas
 
-Classe Indicadores
-    classe principal com funções que são comuns à todas outras
+Vou ter uma Classe de Indicadores com métodos para coletar dados indicadores a partir do dataset 
+ex: maior, menor, média, frequência
 
-    -pegar o dado mais e menos frequente
-    -pegar o maior e menor dado
-
- Classes IndicadorCliente, IndicadorProduto, IndicadorLoja
-    subclasses que vão tomar ações a partir de funções da classe principal
-
-    Cliente
-    -Ofertar fidelidade
-    -Ofertar cupom
-    -Mensagem de atendimento personalizado
-
-    Produto
-    -Promover
-    -Reduzir preço
-    -Retirar do catálogo
-
-    Loja
-    -Bonificar funcionários
-    -Abrir mais lojas
-    -Fechar loja
-
-
-
-
-
-
-
-Montar pilha com planilhas
-    usar o pandas pra gerar um outro dataset de "compras" com dados mesclados
+Fambém fazer augmentation a partir do dataset
+Montar a pilha com a planilhas 
+ex: usar o pandas pra gerar um outro dataset de "compras" com dados mesclados
