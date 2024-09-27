@@ -22,7 +22,7 @@ class Tubo:
         pandas.core.frame.DataFrame
             A linha de dados do dataframe
         """
-        return self.dados.iloc[-1]
+        return self.dados.iloc[-1].copy()
 
     def remover_dado_dataframe(self):
         """

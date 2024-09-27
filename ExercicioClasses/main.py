@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from datetime import datetime
 from Tubo import Tubo
@@ -5,7 +6,7 @@ from Dado_Geral import Dado_Geral
 from Cliente import Cliente
 from Ordem import Ordem
 from Produto import Produto
-
+from Barra_Progresso import Barra_Progresso
 
 banco_dados = pd.read_csv(r'dados.csv', encoding='utf-8')
 dataframe = Tubo(banco_dados)
@@ -15,10 +16,13 @@ cliente = Cliente(dado_geral)
 ordem = Ordem(dado_geral)
 produto = Produto(dado_geral)
 
-for x in range(10):
-#while not dataframe.dados.empty:
-    dataframe.separar_dado_lifo()
+barra_progresso = Barra_Progresso()
+
+len_barra_progresso = barra_progresso.definir_barra_progresso(len(banco_dados))
+#for x in range(5):
+while not dataframe.dados.empty:
     linha = dataframe.separar_dado_lifo()
+    linha = Dado_Geral.substituir_valor_coluna(linha)
 
     dado_geral.customer_id = linha['customer_id']
     dado_geral.customer_zip_code_prefix = int(linha['customer_zip_code_prefix'])
@@ -37,22 +41,23 @@ for x in range(10):
     dado_geral.product_width_cm = float(linha['product_width_cm'])
 
 
-    cliente.exibir_dados()
-    cliente.verificar_vazio()
-    cliente.pegar_dados_cep(cliente.customer_zip_code_prefix)
-    cliente.validar_uf_cidade(cliente.customer_zip_code_prefix, cliente.customer_city, cliente.customer_state)
+    # cliente.exibir_dados()
+    # cliente.verificar_vazio()
+    # cliente.pegar_dados_cep(cliente.customer_zip_code_prefix)
+    # cliente.validar_uf_cidade(cliente.customer_zip_code_prefix, cliente.customer_city, cliente.customer_state)
 
 
-    ordem.exibir_dados()
-    ordem.verificar_vazio()
-    ordem.delay_aprovacao(ordem.order_purchase_timestamp, ordem.order_approved_at)
+    # ordem.exibir_dados()
+    # ordem.verificar_vazio()
+    # ordem.delay_aprovacao(ordem.order_purchase_timestamp, ordem.order_approved_at)
 
 
-    produto.exibir_dados()
-    produto.verificar_vazio()
-    produto.cubagem(produto.product_height_cm, produto.product_width_cm, produto.product_length_cm)
+    # produto.exibir_dados()
+    # produto.verificar_vazio()
+    # produto.cubagem(produto.product_height_cm, produto.product_width_cm, produto.product_length_cm)
 
 
     dataframe.remover_dado_dataframe()
+    barra_progresso.update(len_barra_progresso)
 
-print('vitória! obrigado Jesus')
+print('\n\nvitória! obrigado Jesus')
