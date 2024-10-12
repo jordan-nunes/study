@@ -12,9 +12,8 @@ Here’s a snapshot of what you’ll find in this repo:
    - Object-oriented programming (OOP)
    - Functional programming, when applicable
 
-2. **Projects**: Mini-projects to reinforce learning through real-world scenarios. Current and planned projects include:
+2. **Challenges**: Mini-Challenges to reinforce learning through real-world scenarios. Current and planned projects include:
    - Data analysis tasks
-   - Web development
    - Algorithmic challenges and problem-solving
    - Any creative ideas that come to mind during the learning journey
 
