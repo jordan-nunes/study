@@ -6,13 +6,9 @@ df_servicos = pd.read_excel('BaseServiçosPrestados.xlsx')
 df_clientes = pd.read_csv('CadastroClientes.csv', sep=';', decimal=',', index_col=0)
 df_funcionarios = pd.read_csv('CadastroFuncionarios.csv', sep=';', decimal=',', index_col=0)
 
-soma_salario = df_funcionarios['Salario Base'].sum()
-soma_impostos = df_funcionarios['Impostos'].sum()
-soma_beneficios = df_funcionarios['Beneficios'].sum()
-soma_vt = df_funcionarios['VT'].sum()
-soma_vr = df_funcionarios['VR'].sum()
-total_salario = soma_salario + soma_impostos + soma_beneficios + soma_vt + soma_vr
-print('Gasto total com salários de funcionários:', total_salario)
+print('Gasto total com salários de funcionários:', df_funcionarios['Salário Total'].sum())
+
+df_funcionarios['Salário Total'] = df_funcionarios['Salario Base'] + df_funcionarios['Impostos'] + df_funcionarios['Beneficios'] + df_funcionarios['VT'] + df_funcionarios['VR']
 
 df_faturamento = pd.DataFrame(columns=['faturamento'])
 df_servico_areas = pd.DataFrame(columns=['Servico por Areas'])
@@ -37,8 +33,6 @@ print('Faturamento médio da empresa:', media_servicos)
 
 df_funcionarios_area = df_funcionarios['Area'].value_counts()
 print('Total de funcionarios por área:\n', df_funcionarios_area.to_string())
-
-
 
 num_funcionarios_servicos = len(df_servicos['ID Funcionário'].unique())
 num_funcionarios = len(df_funcionarios)
