@@ -1,5 +1,3 @@
----
-
 # 🧑‍💻 Programming Study Repository
 
 Welcome to my personal programming study repository! This space is dedicated to storing and tracking all my exercises, projects, and learning material as I continue my journey in coding and development. This collection includes everything from beginner projects to more advanced implementations as I dive deeper into programming languages, algorithms, and software development concepts.
@@ -39,7 +37,3 @@ As I progress, I’m exploring and practicing with a mix of languages and framew
 Feel free to browse around! Each project and exercise includes its own README for clarity on purpose and usage. 
 
 > **Disclaimer**: This repository is for educational purposes and might not follow best practices for production code.
-
----
-
-Happy coding!
