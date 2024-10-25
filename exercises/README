@@ -1,0 +1,51 @@
+# 📘 Exercises Directory
+
+This directory holds all the programming exercises I’ve completed to build a strong foundation in coding concepts. It’s organized by exercise lists, each of which contains multiple practice problems along with my solutions. These exercises help reinforce my understanding of syntax, logic, algorithms, and data structures.
+
+## 🗂️ Structure
+
+Each list of exercises is contained within its own folder. Here's how it’s organized:
+
+- **Exercise Lists**: Each folder represents a different set of exercises. For example:
+  - `List_01`: Basic syntax and introductory problems
+  - `List_02`: Intermediate-level challenges, covering data structures and algorithms
+  - And so on...
+
+- **Solved Exercises**: Inside each list folder, you’ll find:
+  - Individual files, each representing a solution to an exercise.
+  - Files are named based on the exercise or problem, making it easy to locate specific solutions.
+
+### Example Structure
+
+```plaintext
+Language/
+│
+├── List_01/
+│   ├── exercise_01.py
+│   ├── exercise_02.py
+│   └── ...
+│
+├── List_02/
+│   ├── exercise_01.py
+│   ├── exercise_02.py
+│   └── ...
+│
+└── ...
+```
+
+## 📄 Contents
+
+- **Exercise Lists**: Each folder has exercises on specific topics, covering:
+  - Syntax basics
+  - Loops and conditionals
+  - Functions and modules
+  - Object-oriented programming
+  - Data manipulation and structures
+
+- **Solution Files**: Each `.py` file contains the code solution to a specific exercise, with comments explaining key parts of the logic.
+
+## 💡 How to Use
+
+Feel free to browse and review any of the solutions to understand the logic behind each exercise. The goal is to create a handy reference as I build my programming skills.
+
+> **Note**: These exercises are for practice and may not represent optimal or production-ready code.
