@@ -18,7 +18,7 @@ Each list of exercises is contained within its own folder. Here's how it’s org
 ### Example Structure
 
 ```plaintext
-exercises/
+Language/
 │
 ├── List_01/
 │   ├── exercise_01.py
