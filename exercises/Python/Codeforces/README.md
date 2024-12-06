@@ -1,8 +1,4 @@
-Here's a README for a directory dedicated to Codeforces Python exercises:
-
----
-
-# 🏆 Codeforces Python Exercises  
+# 🏆 Codeforces
 
 This directory contains my solutions to various competitive programming problems from [Codeforces](https://codeforces.com/). The challenges are solved using Python, focusing on efficient algorithms and clean code.  
 
